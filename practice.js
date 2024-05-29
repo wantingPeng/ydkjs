@@ -83,35 +83,7 @@ console.log(add(2,3));
  42==='42'//false
 
 
-class publication{
-  constructor(title,author,pubDate){
-    this.title=title;
-    this.author=author;
-    this.pubDate=pubDate;
-  }
-  print(){
-    console.log(`Titel:${this.title}, By:${this.author}, ${this.pubDate}`)
-  }
-}
 
-//Class Inheritance
-class book extends publication{
-  constructor(text, pattern, sitePage){
-    this.text=text;
-    this.pattern=pattern;
-    this.sitePage=sitePage;
-    super(
-      title,author,pubDate
-    );
-  }
-  print(){
-    console.log(this.pattern);
-    super.print();
-  }
- }
-
-var mathBook=new book('1','2','3');
-mathBook.print();
 
 
 // person.js (Module)
@@ -131,3 +103,53 @@ import { Person } from './person.js';
 
 const person1 = new Person('Bob', 25);
 person1.greet(); // Output: Hello, my name is Bob and I am 25 years old.
+
+
+
+// This includes strings, arrays, maps, sets, and others
+const array=['a','b','c'];
+for (const element of array){
+  console.log(element);
+}
+// Output:
+// a
+// b
+// c
+const string='hello';
+for (const char of string){
+  console.log(char);
+}// Output:
+// h
+// e
+// l
+// l
+// o
+
+
+const map1=new Map();
+//Adding Elements
+map1.set ('key1','value');
+map1.set('key2','value2');
+//Accessing Elements
+console.log(map1.get('key1'));
+map1.delate('key2');
+//Iterating Over a Map
+for (const [key,value] of map1)
+  {
+    console.log (`${key}:${value}`)
+  }
+const set=new Set();
+//Adding Elements
+set.add(1);
+set.add(2);
+set.add(3);
+for (const value of set){
+  console.log(value);
+}
+//Map: Useful when you need to associate values with keys and need to efficiently look up, add, and remove pairs.
+//Set: Useful when you need to store unique values and check for their existence.
+
+//closure: remember the outer of function scope even after creation time
+
+//heigh order function
+//a function that take another function as parameters
